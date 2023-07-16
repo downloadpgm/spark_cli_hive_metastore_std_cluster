@@ -9,6 +9,9 @@ services:
       - mynet
     depends_on:
       - spk1,spk2
+    ports:
+      - 4040:4040
+      - 8080:8080
   spk1:
     image: mkenjis/ubspkcluster_img
     networks:

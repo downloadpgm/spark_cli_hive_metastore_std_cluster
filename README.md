@@ -57,13 +57,13 @@ xf8qop5183mj   spk_spk_cli   replicated   0/1        mkenjis/ubspkcli_yarn_img:l
 
 1. download hive binaries and unpack it
 ```shell
-wget http://archive.apache.org/dist/hive/hive-2.1.0/apache-hive-2.1.0-bin.tar.gz
-tar -xzf apache-hive-2.1.0-bin.tar.gz
+wget https://archive.apache.org/dist/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz
+tar -xzf apache-hive-1.2.1-bin.tar.gz
 ```
 
 2. access mysql server node and run hive script to create metastore tables
 ```shell
-/root/staging/apache-hive-2.1.0-bin/scripts/metastore/upgrade/mysql
+/root/staging/apache-hive-1.2.1-bin/scripts/metastore/upgrade/mysql
 mysql -uroot -p metastore < hive-schema-1.2.0.mysql.sql
 Enter password:
 ```
