@@ -38,6 +38,19 @@ services:
       - .:/root/staging
       - db:/var/lib/mysql
 
+  hdpmst:
+    image: mkenjis/ubhdp_img
+    deploy:
+      placement:
+        constraints:
+          - node.labels.hostlabel == hdpmst
+    volumes:
+      - .:/root/staging
+      - name0:/hadoop/hdfs/namenode
+      - data0:/hadoop/hdfs/datanode
+    networks:
+      - mynet
+
 networks:
   mynet:
     external:
@@ -45,3 +58,5 @@ networks:
 
 volumes:
   db:
+  name0:
+  data0:
